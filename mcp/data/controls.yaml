@@ -1,0 +1,17 @@
+# ISO references are control IDs only.
+- id: SECRETS-01
+  summary: No secrets (keys, tokens, passwords) stored in source code.
+  obligations: [GDPR-ART32]
+  iso27001: [A.5.17]
+- id: DEPS-01
+  summary: Patch dependencies with known vulnerabilities.
+  obligations: [GDPR-ART32]
+  iso27001: [A.8.8]
+- id: ROPA-02
+  summary: The record of processing covers every personal-data field the system stores.
+  obligations: [GDPR-ART30]
+  iso27001: []
+- id: AI-DISCLOSE-01
+  summary: Tell users they are talking to an AI.
+  obligations: [EUAIA-ART50]
+  iso27001: []

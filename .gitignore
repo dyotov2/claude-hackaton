@@ -3,3 +3,9 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# compliance-knowledge MCP server
+.venv/
+__pycache__/
+.pytest_cache/
+mcp/evidence.jsonl

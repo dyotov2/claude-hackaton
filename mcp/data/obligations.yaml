@@ -1,0 +1,16 @@
+# Plain-language summaries only. Not legal text.
+- id: GDPR-ART30
+  framework: GDPR
+  article: "Art. 30"
+  summary: Keep an up-to-date record of what personal data you process, why, and who it is shared with.
+  applies_if: [processes_eu_personal_data]
+- id: GDPR-ART32
+  framework: GDPR
+  article: "Art. 32"
+  summary: Protect personal data with security measures that fit the risk, such as access control and patching.
+  applies_if: [processes_eu_personal_data]
+- id: EUAIA-ART50
+  framework: EU AI Act
+  article: "Art. 50"
+  summary: When people interact with an AI system, make sure they know it is an AI.
+  applies_if: [people_talk_to_ai]

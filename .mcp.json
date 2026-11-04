@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "compliance-knowledge": {
+      "command": ".venv/bin/python",
+      "args": ["mcp/server.py"]
+    }
+  }
+}

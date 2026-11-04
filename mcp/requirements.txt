@@ -1,0 +1,4 @@
+# FastMCP lives at mcp.server.fastmcp in the 1.x SDK; 2.x renamed it to MCPServer.
+mcp>=1.2,<2
+PyYAML>=6
+pytest>=8

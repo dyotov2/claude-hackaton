@@ -1,0 +1,21 @@
+# detect is a list of argv tokens; {path} is the only placeholder run_check substitutes.
+# Exit 0 = pass, 1 = fail, anything else or a timeout = not_checked.
+- id: secret-in-repo
+  control: SECRETS-01
+  # --no-git scans files on disk (plain detect only reads git history);
+  # --redact keeps the raw secret out of the evidence log.
+  detect: [gitleaks, detect, --no-git, --redact, --source, "{path}"]
+  fix: Move the key to a secret store and rotate it.
+  verify: Re-run gitleaks.
+  evidence: Hashed log entry.
+  gate: human approval
+  action: fix_in_code
+- id: vulnerable-deps
+  control: DEPS-01
+  # --exit-code 1 is required, otherwise trivy exits 0 even with findings.
+  detect: [trivy, fs, --exit-code, "1", --severity, "HIGH,CRITICAL", "{path}"]
+  fix: Bump affected dependencies to fixed versions.
+  verify: Re-run trivy.
+  evidence: Hashed log entry.
+  gate: human approval
+  action: fix_in_code
